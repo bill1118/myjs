@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--駝峰式命名-->
+    <!-- 大駝峰:每個單字字首大寫-->
+    <!--小駝峰:第二個單字開始字首大寫 -->
+    <script>
+        let dogName="夢";
+        console.log(`我的名字:${dogName}`);
+        let dogAge=7;
+        console.log(`我的年紀:${dogAge}歲`);
+        dogAge="7";     //這是字串型態
+        //取得資料型態=> typeof(變數名)
+        console.log(typeof(dogAge));
+        //型態未轉換為數值
+        console.log(`我的年紀:${dogAge+5}歲`);
+        //型態已暫時轉換為數值
+        console.log(`我的年紀:${Number(dogAge)+5}歲`);
+        //真正要字串轉數值，必須重新指派轉換結果給原來的變數
+        dogAge=Number(dogAge);    
+        console.log(typeof(dogAge));
+
+        let pi=3.14;
+        let r=6;
+        let area=pi*r*r;
+        console.log(area);
+        console.log(parseInt(area));    //parseInt:無條件取整數
+        console.log(area.toFixed(2));   //toFixed:可選取幾位數小數
+        console.log(Number(area.toFixed(2))+1);     //若要運算，必須用nimber()轉換
+        
+        
+        
+        
+        </script>
+
+
+
+
+    
+</body>
+</html>
