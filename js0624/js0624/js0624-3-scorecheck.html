@@ -9,23 +9,25 @@
     <script>
         let score;
         score=window.prompt('請輸入您的分數');
+        let intscore=Number(score);
         //檢查是否按了取消
         if(score==null){
             window.alert('您按了取消');
-        }else if(score<0 || score>100){
+        }else if(score==""){
+            window.alert("分數不能空白");
+        }else if(intscore<0 || intscore>100){
             window.alert('範圍錯誤');
-        }else if(score>=60 && score==100){
+        }else if(intscore>=60 && intscore==100){
             window.alert('及格!');
-        }else if(score<60){
+        }else if(intscore<60){
             window.alert('不及格!');
         }else {
             //檢查是否為非數值的字串轉換為NaN
-            score=Number(score);
-            if(isNaN(score)){
+            if(isNaN(intscore)){
                 alert('輸入的分數錯誤');
             }
         }
-        
+        22
         
     </script>
 </body>
