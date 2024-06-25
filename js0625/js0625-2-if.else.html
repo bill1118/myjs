@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //let a = prompt('請輸入您的血型').trim(); //去除多餘空白後，再重新指派回a變數
+        let a = prompt('請輸入您的血型');
+        if (a == null){
+            document.write('按了取消');
+        } else{
+            a=a.trim().toUpperCase();
+            if(a==''){
+                document.write('未輸入血型');
+            }else if(a=='A'){
+                document.write('A型');
+            }else if(a=='B'){
+                document.write('B型');
+            }else if(a=='O'){
+                document.write('O型');
+            }else if(a=='AB'){
+                document.write('AB型');
+            }else{
+                document.write('輸入錯誤');
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

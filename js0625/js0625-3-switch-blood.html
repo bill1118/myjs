@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt('請輸入血型');
+
+        if (a == null) {
+            document.write('按了取消');
+        } else {
+            let aa = a.toUpperCase();
+            switch (aa.trim()) {
+                case '':
+                    document.write('您未填寫內容');
+                    break;
+                case 'A':
+                    document.write('A型');
+                    break;
+                case 'B':
+                    document.write('B型');
+                    break;
+                case 'O':
+                    document.write('O型');
+                    break;
+                case 'AB':
+                    document.write('AB型');
+                    break;
+                default:
+                    document.write('輸入err');
+                    break;
+            }
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
