@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //執行回圈的前提
+        //1.連續執行一樣的程式序敘述
+        //2.有規律性
+        //for()=>已知執行參數
+        //for(參數1;參數2;參數3)
+        //參數1:回券計數器變數起始值
+        //參數2:執行回圈的條件
+        //參數3:每次執行回圈後，計數器變數的增減值
+
+        //ex1:顯示5次
+        for (let i = 1; i <= 5; i++) {
+            document.write('hello<br>');
+        }
+        //<hr> =>建立水平線
+        document.write('<hr>');
+
+        //ex2:從10開始顯示
+        //方法1:
+        for (i = 10; i <= 15; i++) {
+            document.write(i + '.');
+        }
+        document.write('<hr>');
+
+        //方法2:適用回圈外的變數顯示數字
+        //a++
+        //1.先顯示
+        //2.再加1
+        let a = 10;
+        for (let i = 1; i <= 6; i++) {
+            document.write(a++ + '.');
+        }
+        document.write('<hr>');
+
+        //方法3:
+        //++b
+        //先+1
+        //再顯示
+        let b = 9;
+        for (let i = 1; i <= 6; i++) {
+            document.write(++b + '.');
+        }
+        document.write('<hr>');
+
+        //ex3:顯示1-10的奇數，用空白隔開
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 1) {
+                document.write(i + " ");
+            }
+        }
+        document.write('<hr>');
+
+        //ex4:顯示1-10的偶數，用逗號隔開，但最後一個逗號取消
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                //1.先顯示值
+                document.write(i);
+                //2.再檢查不是最後一個值時，顯示逗號
+                if (i != 10) {
+                    document.write('.');
+                }
+
+            }
+        }
+        document.write('<hr>');
+
+        //用一個倍數，找出1-10間，3與5的倍數
+        let str3 = '';
+        let str5 = '';
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                str3 = str3 + i + ' ';//也可寫成 str3 += i + ' '
+            } else if (i % 5 === 0) {
+                str5 = str5 + i + ' ';
+            }
+        }
+        //反引號中的變數要用${變數名}包以來
+        document.write(`1-10中3的變數=>${str3}<br>`);
+        document.write(`1-10中5的變數=>${str5}<br>`);
+
+        //i=i+1 => i += 1
+        //i=i-1 => i -= 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
