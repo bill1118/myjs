@@ -11,13 +11,14 @@
     <script>
         let a = ' ';
         for (let i = 1; i <= 5; i++) {
-            for (let j = 1; j <= 1; j++) {
-                a = i * j;
-                a2=a+"*"
-                document.write(`${a2}<br>`);
+            let b=' ';
+            for (let j = 1; j<=i; j++) {
+                b += '*';
+               
             }
+            a += b+"<br>";
         }
-
+        document.write(a);
     </script>
 
 </body>
