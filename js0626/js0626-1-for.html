@@ -76,17 +76,39 @@
 
         //用一個倍數，找出1-10間，3與5的倍數
         let str3 = '';
+        let str3a = "";
+        let s3 = 0;
+
         let str5 = '';
+        let str5a = "";
+        let s5 = 0;
+
         for (let i = 1; i <= 10; i++) {
             if (i % 3 === 0) {
                 str3 = str3 + i + ' ';//也可寫成 str3 += i + ' '
+                str3a = str3a + i;
+                if (i != 9) {
+                    str3a = str3a + '+';
+                } else {
+                    str3a = str3a + '=';
+                }
+                s3 = s3 + i;
             } else if (i % 5 === 0) {
                 str5 = str5 + i + ' ';
+                str5a = str5a + i;
+                if (i != 10) {
+                    str5a = str5a + '+';
+                } else {
+                    str5a = str5a + '=';
+                }
+                s5 = s5 + i;
             }
         }
         //反引號中的變數要用${變數名}包以來
         document.write(`1-10中3的變數=>${str3}<br>`);
+        document.write(`${str3a + s3}<br>`);
         document.write(`1-10中5的變數=>${str5}<br>`);
+        document.write(`${str5a + s5}<br>`);
 
         //i=i+1 => i += 1
         //i=i-1 => i -= 1

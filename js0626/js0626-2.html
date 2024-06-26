@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt('請輸入起始數值');
+        a = Number(a);
+        let b = prompt('請輸入最終數值');
+        b = Number(b);
+        if (a > b) {
+            let c = a;
+            a = b;
+            b = c;
+        }
+
+
+        let tota = 0;
+        let totb = 0;
+        for (i = a; i <= b; i++) {
+            if (i % 2 === 1) {
+                tota = tota + i;
+            } else {
+                totb = totb + i;
+            }
+
+        }
+        document.write(`${a}-${b}的奇數值=>${tota}<br>`);
+        document.write(`${a}-${b}的偶數值=>${totb}`);
+
+
+
+    </script>
+</body>
+
+</html>
