@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tot = 0;
+        let pass = 0;
+        let fail = 0;
+        let count = 0;
+        let avg = 0;
+
+        while (true) {
+            count++;
+            let input = prompt(`第${count}分數`);
+
+            if (input === '-1' || input == null) {
+                break;
+            }
+            let score = parseInt(input);
+            if (!isNaN(score)) {
+                if (score >= 60) {
+                    pass++;
+                } else {
+                    fail++;
+                }
+                document.write(`第${count}次分數=${score}<br>`);
+            } else {
+                document.write(`請輸入有效的分數，重新輸入<br>`);
+            }
+            tot = tot + score;
+            avg = tot/(pass + fail);
+            avg= avg.toFixed(2);
+            
+        }
+        document.write(`及格${pass}人<br>`);
+        document.write(`不及格${fail}人<br>`);
+        document.write(`總分${tot}分<br>`);
+        document.write(`平均${avg}分<br>`);
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函數宣告狀況三:有參數，有傳回直
+        function chkScore(intNum) {
+            if (score >= 60) {
+                return '及格';
+            } else {
+                return '不及格';
+            }
+        }
+        let score = Number(prompt('請輸入分數'));
+        let result = chkScore(score);
+        document.write(result);
+    </script>
+</body>
+</html>

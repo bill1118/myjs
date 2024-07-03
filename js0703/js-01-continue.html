@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //continue (忽略下方程式執行)
+        //當成是執行到continue時
+        //continue之後的程式碼都不執行
+        //直接回到迴圈起始位置
+
+        //1-100中5的倍數合
+        //for
+        let tot = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 != 0) {
+                continue;
+            }
+            tot = tot + i;
+        }
+        document.write(`1-100中5的倍數合=${tot}`);
+        document.write("<hr>");
+
+        //while
+        tot = 0;
+        let i =0;
+        while (i <= 100) {
+            i++;
+            if (i % 5 != 0) {
+                continue;  
+            }
+            tot += i;
+            
+        }
+        document.write(`1-100中5的倍數合=${tot}`);
+        document.write("<hr>");
+
+        //do while
+        tot = 0;
+        i =0;
+        do {
+            i++;
+            if (i % 5 != 0) {
+                continue;  
+            }
+            tot += i;
+        }while (i <= 100);
+        document.write(`1-100中5的倍數合=${tot}`);
+    </script>
+</body>
+
+</html>

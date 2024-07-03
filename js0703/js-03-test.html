@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calc(a, b, c) {
+            if (c == "+") {
+                document.write(`${a}+${b}=${a + b}`);
+            } else if (c == '-') {
+                document.write(`${a}-${b}=${a - b}`);
+            } else if (c == '*') {
+                document.write(`${a}*${b}=${a * b}`);
+            } else if (c == '/') {
+                document.write(`${a}/${b}=${(a / b).toFixed(2)}`);
+            } else {
+                document.write('運算符號不存在');
+            }
+
+        }
+        let inputa = prompt('請輸入數字');
+        let inputb = prompt('請輸入數字');
+        let inputc = prompt('請輸入四則運算符號之一');
+
+        if (inputa == null || inputb == null || inputc == null) {
+            document.write('按到取消，請再輸入一次');
+        } else if (isNaN(inputa) || isNaN(inputb)) {
+            document.write('非數字，無法運算');
+        } else {
+            inputa = Number(inputa.trim());
+            inputb = Number(inputb.trim());
+            calc(inputa, inputb, inputc);
+        } 
+    </script>
+</body>
+
+</html>

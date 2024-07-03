@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //fuction 名稱(參數，參數...){}
+
+        //函數宣告狀況一:無參數，無傳回直
+        //建立一個打招呼函式
+        function sayHi() {
+            document.write('hello<br>');
+        }
+        //呼叫函式 => 函式名稱()
+        sayHi()
+
+        //函數宣告狀況二:有參數，無傳回直
+        function sayHi2(strName) {
+            document.write('hi,' + strName + '早安<br>');
+        }
+        let inputeName = prompt('請為你的名字');
+        sayHi2(inputeName);
+
+        
+    </script>
+</body>
+
+</html>

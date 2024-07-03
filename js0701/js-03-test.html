@@ -25,20 +25,37 @@
             }
         }
         document.write('<hr>');
+
         //while
         let i = 1;
-        tot = 0;   //沿用for迴圈時的tot變數，所以tot=0;
+        tot = 0;   //沿用for迴圈時的tot變數，所以重新指派tot=0;
         while (i <= 100) {
-            if (i % 5 === 0){
+            if (i % 5 === 0) {
                 tot += i;
                 document.write(`i=${i}， tot=${tot}<br>`);
-                
-            if (tot > 50) {
-                break;
+
+                if (tot > 50) {
+                    break;
+                }
             }
-        } 
-        i++;    //不管是否為5的倍數都要+1
-    }
+            i++;    //不管是否為5的倍數都要+1
+        }
+        document.write('<hr>');
+
+        /* do while */
+        tot = 0;   //沿用for迴圈時的tot變數，所以tot=0;
+        i = 1;    //沿用i變數，所以重新指派i=1
+        do {
+            if (i % 5 === 0) {
+                tot += i;
+                document.write(`i=${i}， tot=${tot}<br>`);
+
+                if (tot > 50) {
+                    break;
+                }
+            }
+            i++;
+        } while (i <= 100);
 
 
     </script>
