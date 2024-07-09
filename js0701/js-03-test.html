@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //顯示1-100，5的倍數並加總
+        //如果加總值超過50，就停止
+
+        //for
+        let tot = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                tot = tot + i;
+                document.write(`i=${i}， tot=${tot}<br>`);
+                if (tot > 50) {
+                    break;
+                }
+
+            }
+        }
+        document.write('<hr>');
+
+        //while
+        let i = 1;
+        tot = 0;   //沿用for迴圈時的tot變數，所以重新指派tot=0;
+        while (i <= 100) {
+            if (i % 5 === 0) {
+                tot += i;
+                document.write(`i=${i}， tot=${tot}<br>`);
+
+                if (tot > 50) {
+                    break;
+                }
+            }
+            i++;    //不管是否為5的倍數都要+1
+        }
+        document.write('<hr>');
+
+        /* do while */
+        tot = 0;   //沿用for迴圈時的tot變數，所以tot=0;
+        i = 1;    //沿用i變數，所以重新指派i=1
+        do {
+            if (i % 5 === 0) {
+                tot += i;
+                document.write(`i=${i}， tot=${tot}<br>`);
+
+                if (tot > 50) {
+                    break;
+                }
+            }
+            i++;
+        } while (i <= 100);
+
+
+    </script>
+</body>
+
+</html>
