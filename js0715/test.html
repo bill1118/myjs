@@ -10,23 +10,24 @@
 <body>
     <script>
         let r1 = Math.floor(Math.random() * 49) + 1;
-        let r2 = Math.floor(Math.random() * 6) + 1;
-        console.log(r1);
-        let arr1 = [];
-        let result = arr1.indexOf(r1);
+        let r2 = Math.floor(Math.random() * 49) + 1;
+        let arr1 = new Array();
 
 
+        for (let i = 1; true; i++) {
+            r1 = Math.floor(Math.random() * 49) + 1;
 
-        function random() {
-            for (i = 1; i <= 6; i++) {
-                if (result == -1 ) {
-                    arr1.push(r1);
-                    console.log('中獎號碼是'+arr1);
-                }
-                console.log('特別號是'+r2);
+            if (arr1.length == 6) {
+                break;
+            } else if (arr1.includes(r1) == false) {
+                arr1.push(r1);
             }
         }
-        random();
+        arr1.sort((a, b) => {
+            return a - b;
+        })
+        console.log('中獎號碼為:'+arr1);
+        console.log('特別獎號為:'+r2);
     </script>
 </body>
 
