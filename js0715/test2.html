@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let r1 = Math.floor(Math.random() * 49) + 1;
+        let r3 = Math.floor(Math.random() * 49) + 1;
+        let r4 = Math.floor(Math.random() * 49) + 1;
+        let r5 = Math.floor(Math.random() * 49) + 1;
+        let r6 = Math.floor(Math.random() * 49) + 1;
+        let r7 = Math.floor(Math.random() * 49) + 1;
+        let r2 = Math.floor(Math.random() * 6) + 1;
+        let arr1 = [];
+        let result = arr1.indexOf(r1);
+        let a = arr1.indexOf(r3);
+        let b = arr1.indexOf(r4);
+        let c = arr1.indexOf(r5);
+        let d = arr1.indexOf(r6);
+        let e = arr1.indexOf(r7);
+
+        function random() {
+
+            if (result, a, b, c, d, e == -1) {
+                arr1.push(r1, r4, r3, r5, r6, r7);
+                arr1.sort((a, b) => {
+                    return a - b; //遞增
+                });
+                console.log('中獎號碼是' + arr1);
+            }
+            console.log('特別號是' + r2);
+        }
+        random();
+    </script>
+</body>
+
+</html>

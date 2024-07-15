@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //取亂數
+        let r1 = Math.random();
+        console.log(r1);
+        //小數2位(使用取小數方法) => toFixed
+        // Number() => 會保存小數點的資料 
+        console.log(Number(r1.toFixed(2)));
+        // parseInt() => 不會保存小數點的資料
+        console.log(parseInt(r1.toFixed(2)));
+
+        //小數2位(沒有使用取小數方法)
+        console.log((Math.floor(r1*100))/100);
+    </script>
+</body>
+</html>

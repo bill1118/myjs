@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //找出亂數1-5任意值
+        // let r1 = Math.random();
+        // console.log(r1);
+        // console.log(r1*5);
+        // console.log((r1*5)+1);
+        // console.log('亂數值='+Math.floor(r1*5)+1);
+        let r1 = Math.floor(Math.random() * 5)+1 ;
+        console.log("亂數值=" + r1);
+
+        //宣告一個陣列
+        let arr1 = [1, 100, 50, 3, 5];
+
+        //尋找陣列中是否存在
+        //方法一:indexOf(item)
+        //存在 -> 傳回第一次出現的陣列編號
+        //不存在 -> -1
+        let result = arr1.indexOf(r1);
+        console.log('陣列中尋找的結果indexOf=' + result);
+        //陣列若沒有找到亂數值，加入陣列push()
+        if (result == -1) {
+            arr1.push(r1);
+            console.log('新陣列=' + arr1);
+        }
+
+
+        //方法二:includes(item)
+        //存在 -> true
+        //不存在 -> false
+        let result2 = arr1.includes(r1);
+        console.log('陣列中尋找的結果inciudes=' + result2);
+    </script>
+</body>
+
+</html>

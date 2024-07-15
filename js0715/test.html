@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let r1 = Math.floor(Math.random() * 49) + 1;
+        let r2 = Math.floor(Math.random() * 6) + 1;
+        console.log(r1);
+        let arr1 = [];
+        let result = arr1.indexOf(r1);
+
+
+
+        function random() {
+            for (i = 1; i <= 6; i++) {
+                if (result == -1 ) {
+                    arr1.push(r1);
+                    console.log('中獎號碼是'+arr1);
+                }
+                console.log('特別號是'+r2);
+            }
+        }
+        random();
+    </script>
+</body>
+
+</html>
