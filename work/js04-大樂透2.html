@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立函式時機點
+        //被動執行
+        //Fuction Name(){...}
+        //立即執行
+        //匿名函式 => fuction(){...}
+        //箭頭函式 => ()=>{...}
+
+        //建立函式:取亂數
+        function getRandNum() {
+            return Math.floor(Math.random() * 49) + 1;
+        }
+        function getRand2Num() {
+            return Math.floor(Math.random() * 39) + 1;
+        }
+        function getRand3Num() {
+            return Math.floor(Math.random() * 8) + 1;
+        }
+
+        function getLotNum() {
+            let arrNum = [];
+            let i = 0;
+            while (i < 6) {
+                let lotNum = getRandNum();
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前:' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            })
+            console.log('排序後:' + arrNum);
+            let speNum = getRandNum();
+            console.log('特別號:' + speNum);
+        }
+
+        function get539Num(){
+            let arrNum = [];
+            let i = 0;
+            while (i < 6) {
+                let lotNum = getRand2Num();
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前:' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            })
+            console.log('排序後:' + arrNum);
+        }
+
+        function get555Num(){
+            let arrNum = [];
+            let i = 0;
+            while (i < 6) {
+                let lotNum = getRandNum();
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log('排序前:' + arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;
+            })
+            console.log('排序後:' + arrNum);
+            let speNum = getRand3Num();
+            console.log('特別號:' + speNum);
+        }
+        
+        let logGameNO = prompt('請輸入樂透號碼代號 => \n1.大樂透\n2.539\n3.威力採');
+
+        if (logGameNO == 1) {
+            getLotNum();
+        } else if (logGameNO == 2) {
+            get539Num();
+        } else if(logGameNo == 3){
+            get555Num();
+        }else{
+            console.log('輸入錯誤');
+        }
+
+    </script>
+</body>
+
+</html>
