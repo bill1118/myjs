@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 32px;
+        }
+
+        .hot{
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .restore{
+            font-size: 32px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <p id="msg" onmousemove="changecolor();" onmouseout="restore();">Hello</p>
+    <script>
+        function changecolor() {
+            //取得變色目標
+            let msg = document.getElementById('msg');
+            //前景色
+            msg.style.color = 'red';
+            //背景色
+            msg.style.backgroundColor = 'yellow';
+            //套用css預先做好的樣式
+            msg.className = 'hot';
+        }
+
+        //滑鼠離開時 還原色彩
+        function restore() {
+            //取得變色目標
+            let msg = document.getElementById('msg');
+            //前景色
+            msg.style.color = '';
+            //背景色
+            msg.style.backgroundColor = '';
+            msg.className = 'restoreHot';
+        }
+    </script>
+</body>
+
+</html>

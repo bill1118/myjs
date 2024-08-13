@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        #div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="div"></div>
+        <button id="btnr" onclick="changestyler();">紅</button>
+        <button id="btng" onclick="changestyleg();">綠</button>
+        <button id="btny" onclick="changestyley();">黃</button>
+        <hr>
+        <button id="btnr" onclick="changeColor('r');">紅</button>
+        <button id="btng" onclick="changeColor('g');">綠</button>
+        <button id="btny" onclick="changeColor('y');">黃</button>
+    </div>
+
+
+    <script>
+        function changestyler() {
+            let btnr = document.getElementById('btnr');
+            btnr.style.color = 'red';
+            let div = document.getElementById('div');
+            div.style.backgroundColor = 'red';
+        }
+        function changestyleg() {
+            let btng = document.getElementById('btng');
+            btng.style.color = 'green';
+            let div = document.getElementById('div');
+            div.style.backgroundColor = 'green';
+        }
+
+        function changestyley() {
+            let btny = document.getElementById('btny');
+            btny.style.color = 'yellow';
+            let div = document.getElementById('div');
+            div.style.backgroundColor = 'yellow';
+        }
+
+
+        //整合上方函式微一個含式，傳參數
+
+        function changeColor(color){
+            let div = document.getElementById('div');
+            switch(color){
+                case 'r':div.style.backgroundColor = 'red';
+                break;
+
+                case 'g':div.style.backgroundColor = 'green';
+                break;
+
+                case 'y':div.style.backgroundColor = 'yellow';
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
