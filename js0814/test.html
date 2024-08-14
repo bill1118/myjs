@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="URL">選擇網站:
+            <select name="" id="web">
+                <option value="">請選擇</option>
+                <option value="https://www.google.com.tw/index.html">google</option>
+                <option value="https://tw.yahoo.com/">yahoo</option>
+                <option value="https://www.youtube.com/">youtube</option>
+            </select>
+        </label>
+    </form>
+
+
+    <script>
+        let web = document.getElementById('web');
+        web.addEventListener('change',function(){
+            //取得下拉選單中的值
+            location.href = web.value;
+        });
+    </script>
+</body>
+
+</html>
